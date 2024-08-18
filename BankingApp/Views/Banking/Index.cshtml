@@ -1,39 +1,29 @@
 @model BankAccount
 
-<h2>Welcome, John Smith</h2>
-<p>Account: 1234</p>
-<p>Balance: @Model.Balance.ToString("C") (CAD)</p>
+<div class="banking-app-container">
+    <h2>Welcome, John Smith</h2>
+    <p id="account-paragraph">Account: 1234</p>
+    <p id="balance-paragraph">Balance: @Model.Balance.ToString("C") (CAD)</p>
 
-@if (ViewBag.ErrorMessage != null) {
-    <p style="color:red">@ViewBag.ErrorMessage</p>
-}
+    @if (ViewBag.ErrorMessage != null) {
+        <p style="color:red">@ViewBag.ErrorMessage</p>
+    }
 
-<form asp-action="Deposit" method="post">
-    <label for="amount">Amount:</label>
-    <input type="number" id="amount" name="amount" required />
+    <div class="form-container">
+        <form asp-action="ProcessTransaction" method="post">
+            <label for="amount">Amount:</label>
+            <input type="number" id="amount" name="amount" required />
 
-    <label for="currency">Currency:</label>
-    <select id="currency" name="currency">
-        <option value="CAD">CAD</option>
-        <option value="USD">USD</option>
-        <option value="MXN">MXN</option>
-        <option value="EURO">EURO</option>
-    </select>
+            <label for="currency">Currency:</label>
+            <select id="currency" name="currencyCode">
+                <option value="CAD">CAD</option>
+                <option value="USD">USD</option>
+                <option value="MXN">MXN</option>
+                <option value="EURO">EURO</option>
+            </select>
 
-    <button type="submit">Deposit</button>
-</form>
-
-<form asp-action="Withdraw" method="post">
-    <label for="amount">Amount:</label>
-    <input type="number" id="amount" name="amount" required />
-
-    <label for="currency">Currency:</label>
-    <select id="currency" name="currency">
-        <option value="CAD">CAD</option>
-        <option value="USD">USD</option>
-        <option value="MXN">MXN</option>
-        <option value="EURO">EURO</option>
-    </select>
-
-    <button type="submit">Withdraw</button>
-</form>
+            <button type="submit" name="transactionType" value="Deposit">Deposit</button>
+            <button type="submit" name="transactionType" value="Withdraw">Withdraw</button>
+        </form>
+    </div>
+</div>

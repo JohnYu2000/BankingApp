@@ -1,22 +1,35 @@
-html {
-  font-size: 14px;
+html, body {
+  height: 100%;
+  margin: 0;
 }
 
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+.container {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
 }
 
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+.banking-app-container {
+  display: grid;
+  max-width: 100vw;
+  max-height: 100vh;
+  grid-template-rows: 1fr 1fr 4fr 4fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.banking-app-container #account-paragraph {
+  grid-area: 1/3/2/5;
+}
+.banking-app-container #balance-paragraph {
+  grid-area: 2/3/3/5;
+}
+.banking-app-container .form-container {
+  grid-area: 3/1/5/5;
+  display: flex;
+  flex-direction: column;
+}
+.banking-app-container h2 {
+  grid-area: 1/1/3/3;
 }
 
-html {
-  position: relative;
-  min-height: 100%;
-}
-
-body {
-  margin-bottom: 60px;
-}
+/*# sourceMappingURL=site.css.map */

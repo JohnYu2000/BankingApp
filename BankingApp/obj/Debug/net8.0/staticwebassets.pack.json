@@ -9,6 +9,14 @@
       "PackagePath": "staticwebassets/css/site.css"
     },
     {
+      "Id": "/Users/johnyu/Downloads/BankingApp/BankingApp/wwwroot/css/site.css.map",
+      "PackagePath": "staticwebassets/css/site.css.map"
+    },
+    {
+      "Id": "/Users/johnyu/Downloads/BankingApp/BankingApp/wwwroot/css/site.scss",
+      "PackagePath": "staticwebassets/css/site.scss"
+    },
+    {
       "Id": "/Users/johnyu/Downloads/BankingApp/BankingApp/wwwroot/favicon.ico",
       "PackagePath": "staticwebassets/favicon.ico"
     },
