@@ -9,13 +9,13 @@ public class BankingController : Controller {
 
     [HttpPost]
     public IActionResult ProcessTransaction(decimal amount, string currencyCode, string transactionType) {
-        Currency currency = CreateCurrency(currencyCode);
+        Currency? currency = CreateCurrency(currencyCode);
         if (currency == null) {
             ViewBag.ErrorMessage = "Invalid currency.";
             return View("Index", _account);
         }
 
-        Transaction transaction = CreateTransaction(transactionType);
+        Transaction? transaction = CreateTransaction(transactionType);
         if (transaction == null) {
             ViewBag.ErrorMessage = "Invalid transaction type.";
             return View("Index", _account);

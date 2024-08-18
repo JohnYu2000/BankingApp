@@ -1,6 +1,6 @@
 public abstract class Currency {
     public abstract decimal ConvertToCad(decimal amount);
-    public string CurrencyCode { get; protected set; }
+    public string? CurrencyCode { get; protected set; }
 }
 
 public class UsdCurrency : Currency {
