@@ -9,6 +9,7 @@ This is a simple banking application developed as part of a take-home assignment
 - [Technologies Used](#technologies-used)
 - [Requirements](#requirements)
 - [Installation](#installation)
+- [Usage](#usage)
 
 ## Features
 - Display current account balance (in CAD)
