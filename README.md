@@ -5,6 +5,7 @@ This is a simple banking application developed as part of a take-home assignment
 
 - [Features](#Features)
     - [Relevant Files](#relevant-files)
+    - [UML Class Diagram](#uml-class-diagram)
 - [Technologies Used](#technologies-used)
 - [Requirements](#requirements)
 - [Installation](#installation)
@@ -29,6 +30,9 @@ Here is a list of the relevant files in the project along with a brief explanati
     - **Index.cshtml**: The main view of the application, this file contains the Razor markup that displays the user interface for the banking application. It shows the account balance, and forms for deposits and withdrawals.
 - **wwwroot**/**css**/
     - **site.scss**: This SCSS file contains the styling for the main view of the application, allowing you to customize the look and feel of the UI.
+
+### UML Class Diagram
+![UML Diagram](./assets/uml.png)
 
 ## Technologies Used
 - C#
