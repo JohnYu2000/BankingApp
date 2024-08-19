@@ -9,7 +9,7 @@ public class BankingController : Controller {
 
     [HttpPost]
     public IActionResult ProcessTransaction(decimal amount, string currencyCode, string transactionType) {
-        Currency? currency = CreateCurrency(currencyCode);
+        CurrencyConverter? currency = CreateCurrency(currencyCode);
         if (currency == null) {
             ViewBag.ErrorMessage = "Invalid currency.";
             return View("Index", _account);
@@ -31,16 +31,16 @@ public class BankingController : Controller {
         return View("Index", _account);
     }
 
-    private Currency? CreateCurrency(string currencyCode) {
+    private CurrencyConverter? CreateCurrency(string currencyCode) {
         switch (currencyCode) {
             case "USD":
-                return new UsdCurrency();
+                return new UsdCurrencyConverter();
             case "MXN":
-                return new MxnCurrency();
+                return new MxnCurrencyConverter();
             case "EURO":
-                return new EuroCurrency();
+                return new EuroCurrencyConverter();
             case "CAD":
-                return new CadCurrency();
+                return new CadCurrencyConverter();
             default:
                 return null;
         };

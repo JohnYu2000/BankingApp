@@ -1,10 +1,10 @@
-public abstract class Currency {
+public abstract class CurrencyConverter {
     public abstract decimal ConvertToCad(decimal amount);
     public string? CurrencyCode { get; protected set; }
 }
 
-public class UsdCurrency : Currency {
-    public UsdCurrency() {
+public class UsdCurrencyConverter : CurrencyConverter {
+    public UsdCurrencyConverter() {
         CurrencyCode = "USD";
     }
 
@@ -13,8 +13,8 @@ public class UsdCurrency : Currency {
     }
 }
 
-public class MxnCurrency : Currency {
-    public MxnCurrency() {
+public class MxnCurrencyConverter : CurrencyConverter {
+    public MxnCurrencyConverter() {
         CurrencyCode = "MXN";
     }
 
@@ -23,8 +23,8 @@ public class MxnCurrency : Currency {
     }
 }
 
-public class EuroCurrency : Currency {
-    public EuroCurrency() {
+public class EuroCurrencyConverter : CurrencyConverter {
+    public EuroCurrencyConverter() {
         CurrencyCode = "EURO";
     }
 
@@ -33,8 +33,8 @@ public class EuroCurrency : Currency {
     }
 }
 
-public class CadCurrency : Currency {
-    public CadCurrency() {
+public class CadCurrencyConverter : CurrencyConverter {
+    public CadCurrencyConverter() {
         CurrencyCode = "CAD";
     }
 

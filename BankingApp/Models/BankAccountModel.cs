@@ -5,14 +5,14 @@ public class BankAccount {
         Balance = initialBalance;
     }
 
-    public string Deposit(decimal amount, Currency currency) {
-        decimal cadAmount = currency.ConvertToCad(amount);
+    public string Deposit(decimal amount, CurrencyConverter currencyConverter) {
+        decimal cadAmount = currencyConverter.ConvertToCad(amount);
         Balance += cadAmount;
         return "Deposit successful.";
     }
 
-    public string Withdraw(decimal amount, Currency currency) {
-        decimal cadAmount = currency.ConvertToCad(amount);
+    public string Withdraw(decimal amount, CurrencyConverter currencyConverter) {
+        decimal cadAmount = currencyConverter.ConvertToCad(amount);
         if (cadAmount <= Balance) {
             Balance -= cadAmount;
             return "Withdrawal successful.";
