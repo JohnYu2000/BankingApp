@@ -1,3 +1,15 @@
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
 html, body {
     height: 100%;
     margin: 0;
@@ -14,24 +26,79 @@ html, body {
     display: grid;
     max-width: 100vw;
     max-height: 100vh;
-    grid-template-rows: 1fr 1fr 4fr 4fr;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 40px 40px 20px 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    border: solid black thick;
+    padding: 50px;
+    justify-items: left;
+    align-items: center;
 
-    #account-paragraph {
-        grid-area: 1 / 3 / 2 / 5;
+    #welcome-label {
+        grid-area: 1 / 1 / 2 / 3;
     }
 
-    #balance-paragraph {
-        grid-area: 2 / 3 / 3 / 5;
+    #account-label {
+        grid-area: 1 / 3 / 2 / 4;
     }
 
-    .form-container {
-        grid-area: 3 / 1 / 5 / 5;
-        display: flex;
-        flex-direction: column;
+    #account-select {
+        grid-area: 1 / 4 / 2 / 6;
+
+        width: 100%;
+        padding: 0px 10px 0px 10px;
     }
 
-    h2 {
-        grid-area: 1 / 1 / 3 / 3;
+    #balance-label {
+        grid-area: 2 / 3 / 3 / 4;
+    }
+
+    #balance-display {
+        grid-area: 2 / 5 / 3 / 6;
+    }
+
+    form {
+        grid-area: 4 / 1 / 5 / 6;
+
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+
+        width: 100%;
+        border: solid black medium;
+        padding: 35px;
+
+        #btn-withdraw {
+            grid-area: 3 / 1 / 4 / 3;
+
+            margin-right: 10px;
+        }
+
+        #btn-deposit {
+            grid-area: 3 / 3 / 4 / 5;
+            
+            margin-left: 10px
+        }
+
+        label {
+            grid-area: 1 / 1 / 2 / 2;
+        }
+
+        input {
+            grid-area: 1 / 2 / 2 / 4;
+
+            text-align: right;
+            padding: 0px 10px 0px 10px;
+        }
+
+        select {
+            grid-area: 1 / 4 / 2 / 5;
+
+            margin-left: 20px;
+        }
+
+        button {
+            border: solid black thin;
+            border-radius: 5px;
+        }
     }
 }
