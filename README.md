@@ -4,7 +4,7 @@ This is a simple banking application developed as part of a take-home assignment
 ## Table of Contents
 
 - [Features](#Features)
-- [Relevant Files](#relevant-files)
+    - [Relevant Files](#relevant-files)
 - [Technologies Used](#technologies-used)
 - [Requirements](#requirements)
 - [Installation](#installation)
@@ -15,7 +15,7 @@ This is a simple banking application developed as part of a take-home assignment
 - Automatic conversion of foreign currencies to CAD
 - Simple web-based user interface
 
-## Relevant Files
+### Relevant Files
 
 Here is a list of the relevant files in the project along with a brief explanation of their purpose:
 
