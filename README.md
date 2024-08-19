@@ -1,6 +1,14 @@
 # BankingApp
 This is a simple banking application developed as part of a take-home assignment for DataCan Services Corp. The application allows users to check their account balance and make deposits or withdrawls in multiple currencies with the applicable exchange rates.
 
+## Table of Contents
+
+- [Features](#Features)
+- [Relevant Files](#relevant-files)
+- [Technologies Used](#technologies-used)
+- [Requirements](#requirements)
+- [Installation](#installation)
+
 ## Features
 - Display current account balance (in CAD)
 - Make withdrawls and deposits in CAD, USD, MXN, or EURO
