@@ -1,12 +1,9 @@
 public abstract class CurrencyConverter {
     public abstract decimal ConvertToCad(decimal amount);
-    public string? CurrencyCode { get; protected set; }
 }
 
 public class UsdCurrencyConverter : CurrencyConverter {
-    public UsdCurrencyConverter() {
-        CurrencyCode = "USD";
-    }
+    public UsdCurrencyConverter() {}
 
     public override decimal ConvertToCad(decimal amount) {
         return amount / 0.50m;  // USD to CAD conversion
@@ -14,9 +11,7 @@ public class UsdCurrencyConverter : CurrencyConverter {
 }
 
 public class MxnCurrencyConverter : CurrencyConverter {
-    public MxnCurrencyConverter() {
-        CurrencyCode = "MXN";
-    }
+    public MxnCurrencyConverter() {}
 
     public override decimal ConvertToCad(decimal amount) {
         return amount / 10.00m;  // MXN to CAD conversion
@@ -24,9 +19,7 @@ public class MxnCurrencyConverter : CurrencyConverter {
 }
 
 public class EuroCurrencyConverter : CurrencyConverter {
-    public EuroCurrencyConverter() {
-        CurrencyCode = "EURO";
-    }
+    public EuroCurrencyConverter() {}
 
     public override decimal ConvertToCad(decimal amount) {
         return amount / 0.25m;  // EURO to CAD conversion
@@ -34,9 +27,7 @@ public class EuroCurrencyConverter : CurrencyConverter {
 }
 
 public class CadCurrencyConverter : CurrencyConverter {
-    public CadCurrencyConverter() {
-        CurrencyCode = "CAD";
-    }
+    public CadCurrencyConverter() {}
 
     public override decimal ConvertToCad(decimal amount)
     {
