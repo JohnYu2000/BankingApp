@@ -5,22 +5,22 @@ public abstract class Transaction {
         _account = account;
     }
 
-    public abstract void Execute(decimal amount, Currency currency);
+    public abstract string Execute(decimal amount, Currency currency);
 }
 
 public class DepositTransaction : Transaction {
     public DepositTransaction(BankAccount account) : base(account) {}
 
-    public override void Execute(decimal amount, Currency currency)
+    public override string Execute(decimal amount, Currency currency)
     {
-        _account.Deposit(amount, currency);
+        return _account.Deposit(amount, currency);
     }
 }
 
 public class WithdrawTransaction : Transaction {
     public WithdrawTransaction(BankAccount account) : base(account) {}
-    public override void Execute(decimal amount, Currency currency)
+    public override string Execute(decimal amount, Currency currency)
     {
-        _account.Withdraw(amount, currency);
+        return _account.Withdraw(amount, currency);
     }
 }

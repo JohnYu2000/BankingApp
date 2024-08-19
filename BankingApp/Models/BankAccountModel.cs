@@ -5,17 +5,19 @@ public class BankAccount {
         Balance = initialBalance;
     }
 
-    public void Deposit(decimal amount, Currency currency) {
+    public string Deposit(decimal amount, Currency currency) {
         decimal cadAmount = currency.ConvertToCad(amount);
         Balance += cadAmount;
+        return "Deposit successful.";
     }
 
-    public void Withdraw(decimal amount, Currency currency) {
+    public string Withdraw(decimal amount, Currency currency) {
         decimal cadAmount = currency.ConvertToCad(amount);
         if (cadAmount <= Balance) {
             Balance -= cadAmount;
+            return "Withdrawal successful.";
         } else {
-            throw new InvalidOperationException("Insufficient funds.");
+            return "Error: Insufficient funds.";
         }
     }
 }

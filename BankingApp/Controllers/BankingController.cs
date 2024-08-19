@@ -21,7 +21,11 @@ public class BankingController : Controller {
             return View("Index", _account);
         }
 
-        transaction.Execute(amount, currency);
+        string result = transaction.Execute(amount, currency);
+
+        if (result.StartsWith("Error")) {
+            ViewBag.ErrorMessage = result;
+        }
 
         // Return to the same index with updated model
         return View("Index", _account);

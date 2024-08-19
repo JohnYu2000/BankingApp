@@ -9,11 +9,11 @@
     <label id="balance-label">BALANCE:</label>
     <div id="balance-display">@Model.Balance.ToString("C") (CAD)</div>
 
-    @if (ViewBag.ErrorMessage != null) {
-        <p style="color:red">@ViewBag.ErrorMessage</p>
-    }
-
     <form asp-action="ProcessTransaction" method="post">
+        @if (ViewBag.ErrorMessage != null) {
+            <p id="error-message" style="color:red">@ViewBag.ErrorMessage</p>
+        }
+
         <label for="amount">Amount:</label>
         <input
             type="number"
