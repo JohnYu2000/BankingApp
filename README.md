@@ -141,6 +141,9 @@ Project Link: [https://github.com/JohnYu2000/BankingApp](https://github.com/John
 # Miscellaneous
 
 ## UML Class Diagram
+
+Here is a UML Diagram illustrating the relationship between each of the relevant classes.
+
 ![UML Diagram](./assets/uml.png)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
