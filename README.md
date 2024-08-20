@@ -50,7 +50,7 @@ This is a simple banking application developed as part of a take-home assignment
 
 * [![C#][c#-badge]][c#-url]
 
-* [![ASP.NET][.net-badge]][.net-url]
+* [![.NET][.net-badge]][.net-url]
 
 * [![HTML][html-badge]][html-url]
 
@@ -70,9 +70,10 @@ This is a simple banking application developed as part of a take-home assignment
 # Getting Started
 
 ## Prerequisites
-- [.NET SDK 8.0 or later](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)
-- A version control system (e.g., [git](https://git-scm.com/downloads))
-- A code editor or IDE (e.g., [Visual Studio Code](https://code.visualstudio.com/download))
+* [![.NET][.net-badge]][.net-url]
+* [![git][git-badge]][git-url]
+* [![github][github-badge]][github-url]
+* [![vscode][vscode-badge]][vscode-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -206,7 +207,7 @@ The `BankingController` class adheres to the following OOP and SOLID principles:
 [c#-badge]: https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=csharp&logoColor=white
 [c#-url]: https://learn.microsoft.com/en-us/dotnet/csharp/
 [.net-badge]: https://img.shields.io/badge/.NET-5C2D91?style=for-the-badge&logo=.net&logoColor=white
-[.net-url]: https://dotnet.microsoft.com/en-us/apps/aspnet
+[.net-url]: https://dotnet.microsoft.com/en-us/download/dotnet/8.0
 [html-badge]: https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white
 [html-url]: https://developer.mozilla.org/en-US/docs/Glossary/HTML5
 [css-badge]: https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white
