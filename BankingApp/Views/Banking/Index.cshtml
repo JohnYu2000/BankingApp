@@ -9,8 +9,8 @@
     <label id="balance-label">BALANCE:</label>
     <div id="balance-display">@Model.Balance.ToString("C") (CAD)</div>
     <form asp-action="ProcessTransaction" method="post">
-        @if (ViewBag.ErrorMessage != null) {
-            <p id="error-message" style="color:red">@ViewBag.ErrorMessage</p>
+        @if (TempData["ErrorMessage"] != null) {
+            <p id="error-message" style="color:red">@TempData["ErrorMessage"]</p>
         }
         <label for="amount">Amount:</label>
         <input

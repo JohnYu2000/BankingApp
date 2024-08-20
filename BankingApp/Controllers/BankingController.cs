@@ -17,24 +17,24 @@ public class BankingController : Controller {
     public IActionResult ProcessTransaction(decimal amount, string currencyCode, string transactionType) {
         CurrencyConverter? currency = CreateCurrency(currencyCode);
         if (currency == null) {
-            ViewBag.ErrorMessage = "Invalid currency.";
-            return View("Index", _account);
+            TempData["ErrorMessage"] = "Invalid currency.";
+            return RedirectToAction("Index");
         }
 
         Transaction? transaction = CreateTransaction(transactionType);
         if (transaction == null) {
-            ViewBag.ErrorMessage = "Invalid transaction type.";
-            return View("Index", _account);
+            TempData["ErrorMessage"] = "Invalid transaction type.";
+            return RedirectToAction("Index");
         }
 
         string result = transaction.Execute(amount, currency);  // result of execution is used for error handling
 
         if (result.StartsWith("Error")) {  // if result message starts with "Error" it means transaction ran into an error
-            ViewBag.ErrorMessage = result;
+            TempData["ErrorMessage"] = result;
         }
 
         // Return to the same index with updated model
-        return View("Index", _account);
+        return RedirectToAction("Index");
     }
 
     // This method converts the currencyCode into its corresponding CurrencyConverter object
