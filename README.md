@@ -8,10 +8,9 @@ This is a simple banking application developed as part of a take-home assignment
 - [Requirements](#requirements)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Design](#design)
-    - [UML Class Diagram](#uml-class-diagram)
-    - [Relevant Files](#relevant-files)
-    - [Object-Oriented Design and SOLID Principles](#object-oriented-design-and-solid-principles)
+- [UML Class Diagram](#uml-class-diagram)
+- [Relevant Files](#relevant-files)
+- [Object-Oriented Design and SOLID Principles](#object-oriented-design-and-solid-principles)
 
 ## Features
 - Display current account balance (in CAD)
@@ -76,12 +75,10 @@ Once the application is running, you can:
 2. **Deposit money**: Enter the amount and select the currency, then click the _Deposit_ button.
 3. **Withdraw money**: Enter the amount and select the currency, then click the _Withdraw_ button.
 
-## Design
-
-### UML Class Diagram
+## UML Class Diagram
 ![UML Diagram](./assets/uml.png)
 
-### Relevant Files
+## Relevant Files
 
 Here is a list of the relevant files in the project along with a brief explanation of their purpose:
 
@@ -96,7 +93,7 @@ Here is a list of the relevant files in the project along with a brief explanati
 - **wwwroot**/**css**/
     - **site.scss**: This SCSS file contains the styling for the main view of the application, allowing you to customize the look and feel of the UI.
 
-### Object-Oriented Design and SOLID Principles
+## Object-Oriented Design and SOLID Principles
 
 **CurrencyConverterClass**
 
