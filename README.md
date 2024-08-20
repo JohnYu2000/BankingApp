@@ -30,7 +30,7 @@
             <ul>
                 <li><a href="#uml-class-diagram">UML Class Diagram</a></li>
                 <li><a href="#relevant-files">Relevant Files</a></li>
-                <li><a href="#object-oriented-design-and-solid-principles">Object Oriented Design and SOLID Principles</a></li>
+                <li><a href="#design-choices">Design Choices</a></li>
             </ul>
         </li>
     </ol>
@@ -162,7 +162,7 @@ Here is a list of the relevant files in the project along with a brief explanati
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Object-Oriented Design and SOLID Principles
+## Design Choices
 
 **CurrencyConverterClass**
 
