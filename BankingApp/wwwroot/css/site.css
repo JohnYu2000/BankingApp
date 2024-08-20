@@ -44,7 +44,10 @@ html, body {
   grid-area: 2/3/3/4;
 }
 .banking-app-container #balance-display {
-  grid-area: 2/5/3/6;
+  grid-area: 2/4/3/6;
+  display: flex;
+  justify-content: right;
+  width: 100%;
 }
 .banking-app-container form {
   grid-area: 4/1/5/6;

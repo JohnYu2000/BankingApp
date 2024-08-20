@@ -48,7 +48,10 @@ html, body {
     }
 
     #balance-display {
-        grid-area: 2 / 5 / 3 / 6;
+        grid-area: 2 / 4 / 3 / 6;
+        display: flex;
+        justify-content: right;
+        width: 100%;
     }
 
     form {
