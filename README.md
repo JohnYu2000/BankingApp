@@ -209,7 +209,7 @@ The `BankingController` class adheres to the following OOP and SOLID principles:
 [c#-badge]: https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=csharp&logoColor=white
 [c#-url]: https://learn.microsoft.com/en-us/dotnet/csharp/
 [.net-badge]: https://img.shields.io/badge/.NET-5C2D91?style=for-the-badge&logo=.net&logoColor=white
-[.net-url]: https://dotnet.microsoft.com/en-us/download/dotnet/8.0
+[.net-url]: https://dotnet.microsoft.com/en-us/download/dotnet
 [html-badge]: https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white
 [html-url]: https://developer.mozilla.org/en-US/docs/Glossary/HTML5
 [css-badge]: https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white
