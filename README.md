@@ -4,36 +4,19 @@ This is a simple banking application developed as part of a take-home assignment
 ## Table of Contents
 
 - [Features](#Features)
-    - [Relevant Files](#relevant-files)
-    - [UML Class Diagram](#uml-class-diagram)
 - [Technologies Used](#technologies-used)
 - [Requirements](#requirements)
 - [Installation](#installation)
 - [Usage](#usage)
+- [Design](#design)
+    - [Relevant Files](#relevant-files)
+    - [UML Class Diagram](#uml-class-diagram)
 
 ## Features
 - Display current account balance (in CAD)
 - Make withdrawls and deposits in CAD, USD, MXN, or EURO
 - Automatic conversion of foreign currencies to CAD
 - Simple web-based user interface
-
-### Relevant Files
-
-Here is a list of the relevant files in the project along with a brief explanation of their purpose:
-
-- **Models**/
-    - **BankAccountModel.cs**: This model represents a bank account. It is responsible for storing the account balance and handling deposit and withdrawal operations. This model is visualized in the `Index` view.
-    - **CurrencyConverterModel.cs**: This class is used to convert foreign currencies (USD, MXN, EURO) to CAD using predefined exchange rates.
-    - **TransactionModel.cs**: This class represents a financial transaction within the application, such as a withdrawal or deposit. It encapulates the details of each transaction.
-- **Controllers**/
-    - **BankingController.cs**: This is the main controller for the Banking application. It handles user interactions, such as deposits and withdrawals, and updates the view with the current account balance.
-- **Views**/**Banking**/
-    - **Index.cshtml**: The main view of the application, this file contains the Razor markup that displays the user interface for the banking application. It shows the account balance, and forms for deposits and withdrawals.
-- **wwwroot**/**css**/
-    - **site.scss**: This SCSS file contains the styling for the main view of the application, allowing you to customize the look and feel of the UI.
-
-### UML Class Diagram
-![UML Diagram](./assets/uml.png)
 
 ## Technologies Used
 - C#
@@ -90,3 +73,23 @@ Once the application is running, you can:
 1. **View your account balance**: The balance is displayed in CAD.
 2. **Deposit money**: Enter the amount and select the currency, then click the _Deposit_ button.
 3. **Withdraw money**: Enter the amount and select the currency, then click the _Withdraw_ button.
+
+## Design
+
+### Relevant Files
+
+Here is a list of the relevant files in the project along with a brief explanation of their purpose:
+
+- **Models**/
+    - **BankAccountModel.cs**: This model represents a bank account. It is responsible for storing the account balance and handling deposit and withdrawal operations. This model is visualized in the `Index` view.
+    - **CurrencyConverterModel.cs**: This class is used to convert foreign currencies (USD, MXN, EURO) to CAD using predefined exchange rates.
+    - **TransactionModel.cs**: This class represents a financial transaction within the application, such as a withdrawal or deposit. It encapulates the details of each transaction.
+- **Controllers**/
+    - **BankingController.cs**: This is the main controller for the Banking application. It handles user interactions, such as deposits and withdrawals, and updates the view with the current account balance.
+- **Views**/**Banking**/
+    - **Index.cshtml**: The main view of the application, this file contains the Razor markup that displays the user interface for the banking application. It shows the account balance, and forms for deposits and withdrawals.
+- **wwwroot**/**css**/
+    - **site.scss**: This SCSS file contains the styling for the main view of the application, allowing you to customize the look and feel of the UI.
+
+### UML Class Diagram
+![UML Diagram](./assets/uml.png)
