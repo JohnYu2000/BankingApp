@@ -11,6 +11,7 @@ This is a simple banking application developed as part of a take-home assignment
 - [Design](#design)
     - [UML Class Diagram](#uml-class-diagram)
     - [Relevant Files](#relevant-files)
+    - [Object-Oriented Design and SOLID Principles](#object-oriented-design-and-solid-principles)
 
 ## Features
 - Display current account balance (in CAD)
@@ -94,3 +95,32 @@ Here is a list of the relevant files in the project along with a brief explanati
     - **Index.cshtml**: The main view of the application, this file contains the Razor markup that displays the user interface for the banking application. It shows the account balance, and forms for deposits and withdrawals.
 - **wwwroot**/**css**/
     - **site.scss**: This SCSS file contains the styling for the main view of the application, allowing you to customize the look and feel of the UI.
+
+### Object-Oriented Design and SOLID Principles
+
+**CurrencyConverterClass**
+
+The `CurrencyConverter` class and its derived classes (`UsdCurrencyConverter`, `MxnCurrencyConverter`, `EuroCurrencyConverter`, `CadCurrencyConverter`) were designed with the following principles in mind:
+- **Single Responsibility Principle**:
+    - Each `CurrencyConverter` class has a single responsibility: converting a specific currency to CAD.
+    - This clear separation of concerns ensures that each class is focused and easier to maintain. This allows changes to one currency's conversion logic without impacting others.
+- **Open/Closed Principle**:
+    - The `CurrencyConverter` class is an abstract base class that defines a contract for converting any currency to Canadian dollars (CAD).
+    - This design allows the system to be extended with new currencies without modifying the existing codebase.
+
+**Transaction Class**
+
+The `Transaction` class, along with its derived classes (`DepositTransaction`, `WithdrawTransaction`), adheres to the following OOP and SOLID principles:
+- **Single Responsibility**:
+    - The `Transaction` class is an abstract base class that represents a financial transaction, such as a deposit or withdrawal.
+    - The derived classes each have a single responsibility: to execute a specific type of transaction on a `BankAccount`. This ensures the code remains clean and focused, making it easier to maintain and extend.
+- **Liskov Substitution Principle**:
+    - The `Transaction` class ensures that any derived class can be substitued for its base class without altering the correctness of the program.
+    - This design allows the `BankingController` to execute transactions polymorphically, treating all transactions uniformly, regardless of their specific type.
+
+**BankingController**
+
+The `BankingController` class adheres to the following OOP and SOLID principles:
+- **Dependency Inversion Principle**:
+    - The `BankingController` class depends on abstractions (`CurrencyConverter` and `Transaction`) rather than concrete implementations.
+    - This design choice allows for greater flexibility and testability, as different implementations of `Transaction` and `CurrencyConverter` can be injected or substituted as needed.
