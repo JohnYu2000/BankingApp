@@ -9,7 +9,6 @@ This is a simple banking application developed as part of a take-home assignment
 - [Installation](#installation)
 - [Usage](#usage)
 - [Design](#design)
-    - [Demo](#demo)
     - [UML Class Diagram](#uml-class-diagram)
     - [Relevant Files](#relevant-files)
 
@@ -76,10 +75,6 @@ Once the application is running, you can:
 3. **Withdraw money**: Enter the amount and select the currency, then click the _Withdraw_ button.
 
 ## Design
-
-### Demo
-
-![Demo](./assets/demo.gif)
 
 ### UML Class Diagram
 ![UML Diagram](./assets/uml.png)
