@@ -73,7 +73,6 @@ This is a simple banking application developed as part of a take-home assignment
 * [![.NET][.net-badge]][.net-url]
 * [![git][git-badge]][git-url]
 * [![github][github-badge]][github-url]
-* [![vscode][vscode-badge]][vscode-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -113,7 +112,7 @@ After building the project, you can run the application with the following comma
 dotnet run
 ```
 
-The application should start, and you can view it in your browser at `http://localhost:8000`.
+The application should start, and you can view it in your browser at `https://localhost:8001` or `http://localhost:8000`.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
