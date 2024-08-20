@@ -26,6 +26,7 @@ This is a simple banking application developed as part of a take-home assignment
 
 ## Requirements
 - [.NET SDK 8.0 or later](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)
+- A version control system (e.g., [git](https://git-scm.com/downloads))
 - A code editor or IDE (e.g., [Visual Studio Code](https://code.visualstudio.com/download))
 
 ## Installation
