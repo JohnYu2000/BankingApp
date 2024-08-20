@@ -1,7 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-// This class is a controller. It processes transactions when a user requests a withdrawal or
-// deposit and invokes business logic to fulfill that request.
+// This class is the main controller and executes processes according to the user's input.
 public class BankingController : Controller {
     private static BankAccount _account = new BankAccount(1000);
 
@@ -9,8 +8,7 @@ public class BankingController : Controller {
         return View(_account);
     }
 
-    // This method processes transactions by performing withdrawals or deposits while converting
-    // currencies to Canadian dollars.
+    // This method retrieves input from the View and processes the transaction.
     // Parameters:
     //  - amount: the amount to withdraw or deposit
     //  - currencyCode: the currency of the amount to deposit or withdraw
@@ -39,9 +37,9 @@ public class BankingController : Controller {
         return View("Index", _account);
     }
 
-    // This method instantiates a CurrencyConverter object from the currencyCode inputed by the user
+    // This method converts the currencyCode into its corresponding CurrencyConverter object
     // Parameters:
-    //  - currencyCode: the currency that the user selected to withdraw or deposit
+    //  - currencyCode: the currency the user is using
     // Returns:
     //  - CurrencyConverter: a CurrencyConverter object used for converting currencies to CAD
     private CurrencyConverter? CreateCurrency(string currencyCode) {
@@ -59,7 +57,7 @@ public class BankingController : Controller {
         };
     }
 
-    // This method instantiates a Transaction object from the transaction type inputed by the user
+    // This method converts the transactionType into its corresponding Transaction object
     // Parameters:
     //  - transactionType: the type of transaction to execute (i.e., withdraw, deposit)
     // Returns:
